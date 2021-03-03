@@ -58,7 +58,7 @@ function HomePage() {
           </button>
           <button
             className="headerBtn willBuyBtn"
-            data-willBuy-count={checkFavoriteAndWillBuy().willBuyCount}
+            data-willbuy-count={checkFavoriteAndWillBuy().willBuyCount}
           >
             <i
               className={
