@@ -31,9 +31,25 @@
   filter: brightness(125%);
 }
 
-.content-container {
+.content-container-default {
   margin: 0 auto;
   box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.5);
+}
+
+.content-container-willBuy-Favorite {
+  margin: 0 auto;
+  box-shadow: -3px -3px 10px 0px rgb(19, 216, 19),
+    3px 3px 10px 0px rgb(236, 16, 16);
+}
+
+.content-container-willBuy {
+  margin: 0 auto;
+  box-shadow: -3px -3px 10px 0px rgb(19, 216, 19);
+}
+
+.content-container-Favorite {
+  margin: 0 auto;
+  box-shadow: 3px 3px 10px 0px rgb(236, 16, 16);
 }
 
 .button-container {
@@ -53,13 +69,20 @@
 }
 
 .favoriteBtn:hover {
-  color: red;
+  color: rgb(206, 23, 23);
 }
 
 .cartBtn:hover {
-  color: rgb(0, 255, 0);
+  color: rgb(30, 192, 30);
 }
 
+.classForCheckedFav {
+  color: rgb(206, 23, 23);
+}
+
+.classForCheckedCart {
+  color: rgb(30, 192, 30);
+}
 button i {
   position: relative;
   z-index: -1;
