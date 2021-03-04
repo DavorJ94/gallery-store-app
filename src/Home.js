@@ -5,13 +5,18 @@ import { initialPrepopulation } from "./actions/initialState";
 import { isFavorite } from "./actions/isFavorite";
 import { willBuy } from "./actions/willBuy";
 import logo from "./images/logo.png";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   const dispatch = useDispatch();
   const images = useSelector((state) => state);
 
   useEffect(() => {
-    dispatch(initialPrepopulation());
+    if (images) {
+      return;
+    } else {
+      dispatch(initialPrepopulation());
+    }
   }, [dispatch]);
 
   const handleClassName = (item) => {
@@ -42,7 +47,10 @@ function HomePage() {
   return (
     <div>
       <header className="header">
-        <img className="logo" src={logo} alt=""></img>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <img className="logo" src={logo} alt=""></img>
+        </Link>
+
         <div className="fav-cart-container">
           <button
             className="headerBtn favoritesBtn"
@@ -56,18 +64,20 @@ function HomePage() {
               }
             ></i>
           </button>
-          <button
-            className="headerBtn willBuyBtn"
-            data-willbuy-count={checkFavoriteAndWillBuy().willBuyCount}
-          >
-            <i
-              className={
-                checkFavoriteAndWillBuy().willBuyCount !== 0
-                  ? "ri-shopping-cart-2-fill"
-                  : "ri-shopping-cart-2-line"
-              }
-            ></i>
-          </button>
+          <Link to="/cart" style={{ textDecoration: "none" }}>
+            <button
+              className="headerBtn willBuyBtn"
+              data-willbuy-count={checkFavoriteAndWillBuy().willBuyCount}
+            >
+              <i
+                className={
+                  checkFavoriteAndWillBuy().willBuyCount !== 0
+                    ? "ri-shopping-cart-2-fill"
+                    : "ri-shopping-cart-2-line"
+                }
+              ></i>
+            </button>
+          </Link>
         </div>
       </header>
       <div className="grid-content">
