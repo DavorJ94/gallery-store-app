@@ -72,13 +72,16 @@ body {
   font-size: 1em;
   outline: none;
   position: relative;
-  z-index: 2;
 }
 
 .btn-delete:hover {
   color: rgba(255, 0, 0, 0.7);
-  transform: scale(1.3);
   outline: none;
+}
+
+.btn-delete i {
+  position: relative;
+  z-index: -1;
 }
 
 .messages {
@@ -95,6 +98,7 @@ body {
 .messages .no-items-msg {
   text-align: start;
   font-style: italic;
+  letter-spacing: 1.3px;
 }
 
 .order-btn {

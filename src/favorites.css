@@ -1,0 +1,26 @@
+.delete-fav-btn {
+  display: block;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em 0;
+  padding-bottom: 0.7em;
+  font-size: 1em;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+}
+
+.delete-fav-btn:hover,
+.delete-fav-btn:focus {
+  background-color: rgba(206, 23, 23, 0.85);
+  color: rgba(255, 255, 255, 1);
+}
+
+.no-favorite-msg {
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 1.3px;
+}

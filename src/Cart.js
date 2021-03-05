@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { willBuy } from "./actions/willBuy";
 import logo from "./images/logo.png";
@@ -37,7 +37,7 @@ function Cart() {
     e.preventDefault();
     document.querySelector(".order-btn").innerText = "Ordering...";
     setTimeout(() => {
-      itemsInCart.map((item) => {
+      itemsInCart.forEach((item) => {
         dispatch(willBuy(item.id));
       });
       const node = document.createElement("H1");
@@ -72,7 +72,6 @@ function Cart() {
                 <button
                   className="btn-delete"
                   name={item.id}
-                  id={item.id}
                   onClick={handleDeleteItem}
                   onMouseOver={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}

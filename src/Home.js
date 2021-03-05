@@ -17,7 +17,7 @@ function HomePage() {
     } else {
       dispatch(initialPrepopulation());
     }
-  }, [dispatch]);
+  }, [dispatch, images]);
 
   const handleClassName = (item) => {
     if (item.isFavorite && item.willBuy)
@@ -33,7 +33,8 @@ function HomePage() {
   const checkFavoriteAndWillBuy = () => {
     let favCounter = 0;
     let willBuyCounter = 0;
-    images?.map((image) => {
+
+    images?.forEach((image) => {
       if (image.isFavorite) favCounter++;
       if (image.willBuy) willBuyCounter++;
     });
@@ -52,18 +53,20 @@ function HomePage() {
         </Link>
 
         <div className="fav-cart-container">
-          <button
-            className="headerBtn favoritesBtn"
-            data-favorite-count={checkFavoriteAndWillBuy().favoritesCount}
-          >
-            <i
-              className={
-                checkFavoriteAndWillBuy().favoritesCount !== 0
-                  ? "ri-heart-3-fill"
-                  : "ri-heart-3-line"
-              }
-            ></i>
-          </button>
+          <Link to="/favorites" style={{ textDecoration: "none" }}>
+            <button
+              className="headerBtn favoritesBtn"
+              data-favorite-count={checkFavoriteAndWillBuy().favoritesCount}
+            >
+              <i
+                className={
+                  checkFavoriteAndWillBuy().favoritesCount !== 0
+                    ? "ri-heart-3-fill"
+                    : "ri-heart-3-line"
+                }
+              ></i>
+            </button>
+          </Link>
           <Link to="/cart" style={{ textDecoration: "none" }}>
             <button
               className="headerBtn willBuyBtn"
