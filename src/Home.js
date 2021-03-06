@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import Loader from "react-loader-spinner";
 import "./home.css";
 import { useDispatch, useSelector } from "react-redux";
 import { initialPrepopulation } from "./actions/initialState";
@@ -10,6 +11,7 @@ import { Link } from "react-router-dom";
 function HomePage() {
   const dispatch = useDispatch();
   const images = useSelector((state) => state);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (images) {
@@ -18,6 +20,12 @@ function HomePage() {
       dispatch(initialPrepopulation());
     }
   }, [dispatch, images]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  });
 
   const handleClassName = (item) => {
     if (item.isFavorite && item.willBuy)
@@ -46,7 +54,7 @@ function HomePage() {
   };
 
   return (
-    <div>
+    <>
       <header className="header">
         <Link to="/" style={{ textDecoration: "none" }}>
           <img className="logo" src={logo} alt=""></img>
@@ -83,7 +91,18 @@ function HomePage() {
           </Link>
         </div>
       </header>
-      <div className="grid-content">
+      <Loader
+        style={{ display: loading ? "block" : "none" }}
+        className="loader"
+        type="Circles"
+        color="#00BFFF"
+        height={150}
+        width={150}
+      />
+      <div
+        className="grid-content"
+        style={{ display: loading ? "none" : "grid" }}
+      >
         {images?.map((item) => {
           return (
             <div className={handleClassName(item)} key={item.id} id={item.id}>
@@ -122,7 +141,7 @@ function HomePage() {
           );
         })}
       </div>
-    </div>
+    </>
   );
 }
 

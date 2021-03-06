@@ -58,8 +58,14 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin: 2em auto;
   align-items: start;
-  column-gap: 1em;
+  column-gap: 0.5em;
   row-gap: 3em;
+}
+
+.loader {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 15em;
 }
 
 .img-container {
@@ -191,5 +197,12 @@ body {
   }
   .fav-cart-container {
     width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .loader {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10em;
   }
 }
