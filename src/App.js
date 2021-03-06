@@ -17,13 +17,13 @@ function App() {
     <Provider store={store}>
       <div>
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/gallery-store-app-react-redux">
             <HomePage />
           </Route>
-          <Route path="/cart">
+          <Route path="/gallery-store-app-react-redux/cart">
             <Cart />
           </Route>
-          <Route path="/favorites">
+          <Route path="/gallery-store-app-react-redux/favorites">
             <Favorites />
           </Route>
         </Switch>

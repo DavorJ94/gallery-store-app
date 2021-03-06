@@ -54,10 +54,16 @@ function Cart() {
   return (
     <>
       <header className="header">
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link
+          to="/gallery-store-app-react-redux"
+          style={{ textDecoration: "none" }}
+        >
           <img className="logo" src={logo} alt=""></img>
         </Link>
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link
+          to="/gallery-store-app-react-redux"
+          style={{ textDecoration: "none" }}
+        >
           <div className="back-to-shopping">
             <i className="ri-arrow-left-s-fill"></i>Continue shopping
           </div>

@@ -56,12 +56,18 @@ function HomePage() {
   return (
     <>
       <header className="header">
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link
+          to="/gallery-store-app-react-redux"
+          style={{ textDecoration: "none" }}
+        >
           <img className="logo" src={logo} alt=""></img>
         </Link>
 
         <div className="fav-cart-container">
-          <Link to="/favorites" style={{ textDecoration: "none" }}>
+          <Link
+            to="/gallery-store-app-react-redux/favorites"
+            style={{ textDecoration: "none" }}
+          >
             <button
               className="headerBtn favoritesBtn"
               data-favorite-count={checkFavoriteAndWillBuy().favoritesCount}
@@ -75,7 +81,10 @@ function HomePage() {
               ></i>
             </button>
           </Link>
-          <Link to="/cart" style={{ textDecoration: "none" }}>
+          <Link
+            to="/gallery-store-app-react-redux/cart"
+            style={{ textDecoration: "none" }}
+          >
             <button
               className="headerBtn willBuyBtn"
               data-willbuy-count={checkFavoriteAndWillBuy().willBuyCount}
