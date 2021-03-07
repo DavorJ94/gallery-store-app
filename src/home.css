@@ -189,14 +189,28 @@ body {
   font-size: 9px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 400px) {
   .header {
     flex-direction: column;
     align-items: center;
     row-gap: 1em;
+    padding: 1em 0em;
   }
   .fav-cart-container {
     width: 100%;
+    column-gap: 0em;
+  }
+
+  .img-container {
+    max-width: 220px;
+  }
+
+  .image {
+    max-width: 220px;
+  }
+
+  .grid-content {
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 700px) {

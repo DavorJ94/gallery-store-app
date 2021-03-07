@@ -15,7 +15,7 @@ function App() {
   const store = createStore(allImages, applyMiddleware(thunk));
   return (
     <Provider store={store}>
-      <div>
+      <>
         <Switch>
           <Route exact path="/gallery-store-app-react-redux">
             <HomePage />
@@ -27,7 +27,7 @@ function App() {
             <Favorites />
           </Route>
         </Switch>
-      </div>
+      </>
     </Provider>
   );
 }

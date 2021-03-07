@@ -33,6 +33,7 @@ body {
   margin: 2em auto;
   margin-bottom: 0.5em;
   justify-content: center;
+  width: 90%;
 }
 
 .item-container {
@@ -88,6 +89,7 @@ body {
   max-width: 800px;
   margin: 0 auto;
   display: block;
+  width: 90%;
 }
 
 .messages .total {
@@ -124,4 +126,10 @@ body {
   text-align: center;
   margin-top: 3em;
   letter-spacing: 3px;
+}
+
+@media (max-width: 600px) {
+  .buyImg {
+    max-width: 120px;
+  }
 }
