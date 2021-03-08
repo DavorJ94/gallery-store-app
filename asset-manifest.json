@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/gallery-store-app-react-redux/static/css/main.17d71d63.chunk.css",
-    "main.js": "/gallery-store-app-react-redux/static/js/main.11fbd853.chunk.js",
-    "main.js.map": "/gallery-store-app-react-redux/static/js/main.11fbd853.chunk.js.map",
+    "main.js": "/gallery-store-app-react-redux/static/js/main.c29bfde0.chunk.js",
+    "main.js.map": "/gallery-store-app-react-redux/static/js/main.c29bfde0.chunk.js.map",
     "runtime-main.js": "/gallery-store-app-react-redux/static/js/runtime-main.39691817.js",
     "runtime-main.js.map": "/gallery-store-app-react-redux/static/js/runtime-main.39691817.js.map",
-    "static/js/2.2db7f4d6.chunk.js": "/gallery-store-app-react-redux/static/js/2.2db7f4d6.chunk.js",
-    "static/js/2.2db7f4d6.chunk.js.map": "/gallery-store-app-react-redux/static/js/2.2db7f4d6.chunk.js.map",
+    "static/js/2.fc98e69e.chunk.js": "/gallery-store-app-react-redux/static/js/2.fc98e69e.chunk.js",
+    "static/js/2.fc98e69e.chunk.js.map": "/gallery-store-app-react-redux/static/js/2.fc98e69e.chunk.js.map",
     "index.html": "/gallery-store-app-react-redux/index.html",
     "static/css/main.17d71d63.chunk.css.map": "/gallery-store-app-react-redux/static/css/main.17d71d63.chunk.css.map",
-    "static/js/2.2db7f4d6.chunk.js.LICENSE.txt": "/gallery-store-app-react-redux/static/js/2.2db7f4d6.chunk.js.LICENSE.txt"
+    "static/js/2.fc98e69e.chunk.js.LICENSE.txt": "/gallery-store-app-react-redux/static/js/2.fc98e69e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.39691817.js",
-    "static/js/2.2db7f4d6.chunk.js",
+    "static/js/2.fc98e69e.chunk.js",
     "static/css/main.17d71d63.chunk.css",
-    "static/js/main.11fbd853.chunk.js"
+    "static/js/main.c29bfde0.chunk.js"
   ]
 }
