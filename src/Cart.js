@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { willBuy } from "./actions/willBuy";
 import logo from "./images/logo.png";
@@ -10,6 +10,8 @@ function Cart() {
   const itemsInCart = useSelector((state) =>
     state.filter((image) => image.willBuy === true)
   );
+
+  const [hideDel, setHideDel] = useState(false);
 
   const handleMouseEnter = (e) => {
     if (document.getElementsByName(`${e.target.name}`)[0]) {
@@ -36,6 +38,7 @@ function Cart() {
   const handleOrder = (e) => {
     e.preventDefault();
     document.querySelector(".order-btn").innerText = "Ordering...";
+    setHideDel(true);
     setTimeout(() => {
       itemsInCart.forEach((item) => {
         dispatch(willBuy(item.id));
@@ -47,6 +50,7 @@ function Cart() {
       setTimeout(() => {
         const removingElement = document.querySelector(".successful-message");
         removingElement.remove();
+        setHideDel(false);
       }, 3000);
     }, 2000);
   };
@@ -81,6 +85,7 @@ function Cart() {
                   onClick={handleDeleteItem}
                   onMouseOver={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
+                  style={{ display: !hideDel ? "flex" : "none" }}
                 >
                   <i name={item.id} className="ri-delete-bin-6-line"></i>
                 </button>
