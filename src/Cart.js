@@ -82,10 +82,9 @@ function Cart() {
                 <button
                   className="btn-delete"
                   name={item.id}
-                  onClick={handleDeleteItem}
+                  onClick={!hideDel ? handleDeleteItem : ""}
                   onMouseOver={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
-                  style={{ display: !hideDel ? "flex" : "none" }}
                 >
                   <i name={item.id} className="ri-delete-bin-6-line"></i>
                 </button>
